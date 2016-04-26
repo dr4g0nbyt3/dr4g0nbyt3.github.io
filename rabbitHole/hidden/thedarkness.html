@@ -27,6 +27,9 @@
   ga('send', 'pageview');
     </script>
     <script>
+        window.onresize = function() {
+            location.reload();
+        }
         window.onload = function() {
         (function() {           
             var matrix = document.getElementById("matrix");
@@ -66,11 +69,6 @@
             
             setInterval(drawMatrix,33);
         })();
-        
-        function refresh() {
-            location.reload();
-        }
-        
         }
         
     </script>
