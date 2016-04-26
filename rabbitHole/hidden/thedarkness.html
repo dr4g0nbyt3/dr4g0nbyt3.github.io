@@ -28,8 +28,7 @@
     </script>
     <script>
         window.onload = function() {
-        (function() {
-                
+        (function() {           
             var matrix = document.getElementById("matrix");
             var matrix2d = matrix.getContext("2d");
             
@@ -61,8 +60,8 @@
                     }
                     drops[i]++;
                 }
-                setInterval(draw,33);
             }
+            setInterval(draw,33);
         })();
         }
         
