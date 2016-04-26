@@ -50,8 +50,8 @@
             }
             
             function drawMatrix() {
-                matrix2d.fillStyle = "rgba(0,0,0,0.5)";
-                matrix2d.fillRect(0,0, matrix.width, matrix.height);
+                matrix2d.fillStyle = "rgba(0,0,0,0.25)";
+                matrix2d.fillRect(0, 0, matrix.width, matrix.height);
                 matrix2d.fillStyle = "#0F0";
                 matrix2d.font = matrixFontSize + "px arial";
                 
@@ -59,7 +59,7 @@
                     var text = matrixCharset[Math.floor(Math.random() * matrixCharset.length)];
                     matrix2d.fillText(text, i * matrixFontSize, drops[i] * matrixFontSize);
                     
-                    if (drops[i] * matrixFontSize > matrix.height && Math.random() > 0.750) {
+                    if (drops[i] * matrixFontSize > matrix.height && Math.random() > 0.950) {
                         drops[i] = 0;
                     }
                     drops[i]++;
