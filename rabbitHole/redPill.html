@@ -30,7 +30,12 @@
         var timer = 5;
         var interval = setInterval(function() {
             timer--;
-            if (counter == 0) {
+            if (timer >= 0) {
+                span = document.getElementById("timer");
+                span.innerHTML = timer;
+            }
+            if (timer === 0) {
+                
                location.href='/rabbitHole/hidden/redPill.html'; 
             clearInterval(interval);
             }
@@ -67,6 +72,7 @@
         <h1 style="padding-right=64px; text-align:center; font-family:manaSpace; color:white;">. . . Welcome . . .</h1>
         <h1 style="padding-right=64px; text-align:center; font-family:manaSpace; font-size:12px; color:white;">So I see you have chosen to take the red pill.</h1>
         <h1 style="padding-right=64px; text-align:center; font-family:manaSpace; font-size:12px; color:white;">If you wish to return leave through the same door you came.</h1>
+        <h1 class="timer" style="padding-right=64px; text-align:center; font-family:manaSpace; color:white;"></h1>
     </div>
     
     <div class="w3-row-padding w3-margin-top">
