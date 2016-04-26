@@ -27,38 +27,41 @@
   ga('send', 'pageview');
     </script>
     <script>
-        var matrix = document.getElementById("matrix");
-        var matrix2d = matrix.getContext("2d");
-        
-        matrix.height = window.innerHeight;
-        matrix.width = window.innerWidth;
-        
-        var matrixCharset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-        matrixCharset = matrixCharest.split("");
-        var matrixFontSize = 12;
-        var matrixColumns = matrix.width/matrixFontSize;
-        var drops = [];
-        
-        for (var x = 0; x < matrixColumns; x++) {
-            drops[x] = 1;
-        }
-        
-        function drawMatrix() {
-            matrix2d.fillStyle = "rgba(0,0,0,0.5)";
-            matrix2d.fillRect(0,0, matrix.width, matrix.height);
-            matrix2d.fillStyle = "#0F0";
-            matrix2d.font = matrixFontSize + "px arial";
-            
-            for (var i = 0; i < drops.length; i++) {
-                var text = matrixCharset[Math.floor(Math.random() * matrixCharset.length)];
-                matrix2d.fillText(text, i * matrixFontSize, drops[i] * matrixFontSize);
+        window.onload = function {
                 
-                if (drops[i] * matrixFontSize > matrix.height && Math.random() > 0.975) {
-                    drops[i]= 0;
-                }
-                drops[i]++
+            var matrix = document.getElementById("matrix");
+            var matrix2d = matrix.getContext("2d");
+            
+            matrix.height = window.innerHeight;
+            matrix.width = window.innerWidth;
+            
+            var matrixCharset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            matrixCharset = matrixCharest.split("");
+            var matrixFontSize = 12;
+            var matrixColumns = matrix.width/matrixFontSize;
+            var drops = [];
+            
+            for (var x = 0; x < matrixColumns; x++) {
+                drops[x] = 1;
             }
-            setInterval(draw,33);
+            
+            function drawMatrix() {
+                matrix2d.fillStyle = "rgba(0,0,0,0.5)";
+                matrix2d.fillRect(0,0, matrix.width, matrix.height);
+                matrix2d.fillStyle = "#0F0";
+                matrix2d.font = matrixFontSize + "px arial";
+                
+                for (var i = 0; i < drops.length; i++) {
+                    var text = matrixCharset[Math.floor(Math.random() * matrixCharset.length)];
+                    matrix2d.fillText(text, i * matrixFontSize, drops[i] * matrixFontSize);
+                    
+                    if (drops[i] * matrixFontSize > matrix.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++
+                }
+                setInterval(draw,33);
+            }
         }
         
     </script>
