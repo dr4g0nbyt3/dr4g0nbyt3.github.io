@@ -50,7 +50,6 @@
                 matrix2d.fillRect(0,0, matrix.width, matrix.height);
                 matrix2d.fillStyle = "#0F0";
                 matrix2d.font = matrixFontSize + "px arial";
-                matrix2d.globalCompositeOperation = 'destination-over';
                 
                 for (var i = 0; i < drops.length; i++) {
                     var text = matrixCharset[Math.floor(Math.random() * matrixCharset.length)];
@@ -62,6 +61,9 @@
                     drops[i]++;
                 }
             }
+            
+            
+            matrix2d.globalCompositeOperation = 'destination-over';
             setInterval(drawMatrix,33);
         })();
         }
