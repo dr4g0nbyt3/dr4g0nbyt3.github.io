@@ -35,6 +35,8 @@
             matrix.height = window.innerHeight;
             matrix.width = window.innerWidth;
             
+            matrix2d.globalCompositeOperation = 'destination-over';
+            
             var matrixCharset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             matrixCharset = matrixCharset.split("");
             var matrixFontSize = 12;
@@ -62,8 +64,6 @@
                 }
             }
             
-            
-            matrix2d.globalCompositeOperation = 'destination-over';
             setInterval(drawMatrix,33);
         })();
         }
