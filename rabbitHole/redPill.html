@@ -27,6 +27,8 @@
   ga('send', 'pageview');
     </script>
     <script> 
+        window.onload = function() {
+        (function() {
         var timer = 5;
         var interval = setInterval(function() {
             timer--;
@@ -39,7 +41,9 @@
                location.href='/rabbitHole/hidden/redPill.html'; 
             clearInterval(interval);
             }
-        }, 1000)
+        }, 1000);
+    })();
+}
     
     </script>
     
