@@ -28,8 +28,11 @@
     </script>
     <script id="matrix">
         window.onresize = function() {
-            location.reload();
+        (function() {
+            location.reload(); 
+        });
         }
+        
         window.onload = function() {
         (function() {           
             var matrix = document.getElementById("matrix");
