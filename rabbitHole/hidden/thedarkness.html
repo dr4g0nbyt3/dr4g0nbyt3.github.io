@@ -30,6 +30,7 @@
         window.onload = function() {
         (function() {           
             var matrix = document.getElementById("matrix");
+            document.getElementById("matrix").style.zIndex = "-1";
             var matrix2d = matrix.getContext("2d");
             
             matrix.height = window.innerHeight;
