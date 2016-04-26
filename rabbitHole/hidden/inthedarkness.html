@@ -81,7 +81,7 @@
             var intObject = setInterval(function() {
                 document.getElementById(id).innerHTML += output[index];
                 index++;
-                if(index == sentence.length) {
+                if(index == output.length) {
                     clearInterval(intObject);
                 }
             }, 100);    
