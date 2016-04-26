@@ -59,7 +59,7 @@
                     var text = matrixCharset[Math.floor(Math.random() * matrixCharset.length)];
                     matrix2d.fillText(text, i * matrixFontSize, drops[i] * matrixFontSize);
                     
-                    if (drops[i] * matrixFontSize > matrix.height && Math.random() > 0.975) {
+                    if (drops[i] * matrixFontSize > matrix.height && Math.random() > 0.750) {
                         drops[i] = 0;
                     }
                     drops[i]++;
@@ -67,7 +67,7 @@
                 }
             }
             
-            setInterval(drawMatrix,12);
+            setInterval(drawMatrix,32);
         })();
         }
         
