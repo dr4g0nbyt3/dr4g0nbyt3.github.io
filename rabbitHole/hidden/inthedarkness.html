@@ -103,21 +103,16 @@
     <div class="w3-container">
             <h3 style="padding-right=64px; text-align:center; font-family:manaSpace; color:white;">Lets get started then</h3>
     </div>
-    
-    <div class="w3-container">
-        <div class="w3-container w3-quarter"></div>
-        <div class="w3-container w3-half w3-card-2 w3-black w3-border-green w3-border" style="text-align:left; font-family:manaSpace; height:500px;">
-            <p id="terminal" style="color: #FFF; font-family:manaSpace; text-decoration:none;"></p>
-        </div>
-        <div class="w3-container w3-quarter"></div>
-    </div>
-    <div class="w3-container">
-        <div class="w3-container w3-quarter"></div>
-        <div class="w3-container w3-half w3-card-2 w3-black w3-bottom-bar w3-border-green w3-border" style="text-align:left; font-family:manaSpace;">
-            <p style="font-family:manaSpace; color:#FFF; text-decoration:none;"> | </p>
-        </div>        
-        <div class="w3-container w3-quarter"></div>
-    </div>    
+
+    <form class="w3-container">
+
+        <label>Ip Address</label>
+        <input type="hidden" name="IP Address" value="<?php echo $_SERVER['REMOTE_ADDR'] ?> ">
+
+        <label>Last Namel</label>
+        <input class="w3-input" type="text">
+
+    </form>   
     
     
     
