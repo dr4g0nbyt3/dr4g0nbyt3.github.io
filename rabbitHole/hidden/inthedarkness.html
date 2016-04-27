@@ -87,7 +87,7 @@
     </script>
 </head>
 <canvas id="matrix" style="display:block; position:fixed; margin:0; padding:0;"></canvas>
-<body onload="terminalOut('ipOut', 'Ip address: 192.168.0.1');" style="background-color: #000; position:relative;">
+<body onload="terminalOut('ipOut', 'Ip address: 192.168.0.1');" onload="terminalOut('browserOut', 'Ip address: 192.168.0.1');" style="background-color: #000; position:relative;">
     <div class="w3-container">
         <div class="w3-container w3-third">
             <a ><img style="width: 100px; float:right;"src="/rabbitHole/hidden/images/dr4g0nbyt31c0n.png"> </a>
@@ -107,8 +107,8 @@
         <div class="w3-container w3-quarter"></div>
         <ul class="w3-container w3-half w3-ul w3-black w3-card-2">
             <li id="ipOut" style="color:#0F0;"></li>
-            <li>Hello</li>
-            <li>Hello</li>
+            <li id="browserOut" style="color:#0F0;"></li>
+            <li id="whoAmIOut" style="color:#0F0;"></li>
         </ul>
         <div class="w3-container w3-quarter"></div>
     </div>
