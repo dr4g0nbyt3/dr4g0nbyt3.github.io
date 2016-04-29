@@ -73,9 +73,21 @@
         }
         
     </script>
+    <script>
+        function terminalOut(id, output) {
+            var index = 0;
+            var intObject = setInterval(function() {
+                document.getElementById(id).innerHTML += output[index];
+                index++;
+                if(index == output.length) {
+                    clearInterval(intObject);
+                }
+            }, 100);    
+        }
+    </script>
 </head>
 <canvas id="matrix" style="display:block; position:fixed; margin:0; padding:0;"></canvas>
-<body style="background-color: #000; position:relative;">
+<body onload="terminalOut('ipOut', 'Ip address: 192.168.0.1'); terminalOut('browserOut', 'Browser: Firefox'); terminalOut('whoAmIOut', 'User: guest'); terminalOut('location', 'Locations: Somewhere in Sweden');" style="background-color: #000; position:relative;">
     <div class="w3-container">
         <div class="w3-container w3-third">
             <a ><img style="width: 100px; float:right;"src="/rabbitHole/hidden/images/dr4g0nbyt31c0n.png"> </a>
@@ -93,9 +105,10 @@
     </div>
     <div class="w3-container">
         <div class="w3-container w3-quarter"></div>
-        <div class="w3-half w3-black w3-card-2" style="border:none;">
-
-        </div>
+        <form class="w3-half w3-black w3-card-2" style="border:none;">
+            <label>Enter Password</label>
+            <input class="w3-input" type="text">
+        </form>
         <div class="w3-container w3-quarter"></div>
     </div>
     
