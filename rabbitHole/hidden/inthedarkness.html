@@ -106,7 +106,7 @@
         <div class="w3-container w3-third"></div>
         <form class="w3-third w3-card-2 w3-margin-top" style="border:none; color:#0F0; text-align:center;">
             <label>Enter Password</label>
-            <input class="w3-input w3-black w3-border" id="password" type="password" style="border-color:#0F0;">
+            <input class="w3-input w3-black w3-border" id="password" onKeyDown="if(event.keyCode==13) obfuscation()" type="password" style="border-color:#0F0;">
         </form>
         <div class="w3-container w3-third"></div>
     </div> 
