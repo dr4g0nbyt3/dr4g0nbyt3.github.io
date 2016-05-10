@@ -76,22 +76,23 @@
     </script>
     <script>
             function obfuscation() {
-            var value = document.getElementById("password").value;
-            var key = window.atob("ZHI0ZzBuYnl0M3t3M19mMWdodF9mMHJfdGgzX3VzM3JzfQ==");
-            if (value == key) {
-                Obfusc4t10n("/gallery.html");
-            }
-            else {
+                event.preventDefault();
+                var value = document.getElementById("password").value;
+                var key = window.atob("ZHI0ZzBuYnl0M3t3M19mMWdodF9mMHJfdGgzX3VzM3JzfQ==");
+                if (value == key) {
+                    Obfusc4t10n("/gallery.html");
+                }
+                else {
                    
-            }
-            function Obfusc4t10n(mystery) {
-                ent3rPl4y3r0ne(mystery);
-            }
+                }
+                function Obfusc4t10n(mystery) {
+                    ent3rPl4y3r0ne(mystery);
+                }
         
-            function ent3rPl4r3r0ne(mystery) {
-                location.href=mystery;
+                function ent3rPl4r3r0ne(mystery) {
+                    location.href=mystery;
+                }
             }
-        }
     </script>
 </head>
 <canvas id="matrix" style="display:block; position:fixed; margin:0; padding:0;"></canvas>
@@ -115,7 +116,7 @@
         <div class="w3-container w3-third"></div>
         <form class="w3-third w3-card-2 w3-margin-top" style="border:none; color:#0F0; text-align:center;">
             <label style="padding-right=64px; text-align:center; font-family:manaSpace;">Enter the grid</label>
-            <input class="w3-input w3-black w3-border" id="password" onKeyDown="if(event.keyCode==13){event.preventDefault(); obfuscation();}" style="border-color:#0F0;">
+            <input class="w3-input w3-black w3-border" id="password" onKeyDown="if(event.keyCode==13)obfuscation()" style="border-color:#0F0;">
         </form>
         <div class="w3-container w3-third"></div>
     </div> 
