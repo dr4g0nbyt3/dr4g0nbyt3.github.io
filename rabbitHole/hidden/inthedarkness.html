@@ -82,20 +82,17 @@
                 ent3rPl4y3r0ne(mystery);
             }
             function obfuscation() {
+                var us3full = window.atob(dHIwdWdoX3RoM19sMDBrMW5nX2dsNHNz);
+                var lucy = "ugJjtkBxMVfFp7rXAzVs39q3NcCXb7Ragsnm+x1e7YZXpBFgsmloJeiW2sW2Y9aMk9p16qgX";
                 event.preventDefault();
                 var value = document.getElementById("password").value;
                 var key = window.atob("ZHI0ZzBuYnl0M3t3M19mMWdodF9mMHJfdGgzX3VzM3JzfQ==");
                 if (value == key) {
-                    Obfusc4t10n("/gallery.html");
+                    Obfusc4t10n(Aes.Ctr.decrypt(lucy, us3full, 256));
                 }
-                else {
-                   
+                else {  
                 }
-
            }
-
-        
-
     </script>
 </head>
 <canvas id="matrix" style="display:block; position:fixed; margin:0; padding:0;"></canvas>
