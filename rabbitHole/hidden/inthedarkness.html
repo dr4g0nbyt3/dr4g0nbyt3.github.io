@@ -77,19 +77,20 @@
             var value = document.getElementById("password").value;
             var key = window.atob("ZHI0ZzBuYnl0M3t3M19mMWdodF9mMHJfdGgzX3VzM3JzfQ==");
             if (value == key) {
-                location.href='/gallery.html';
-                Obfusc4t10n();
+                Obfusc4t10n("/gallery.html");
             }
             else {
-                window.alert("Try and try again.");   
+                   
+            }
+            function Obfusc4t10n(mystery) {
+                ent3rPl4y3r0ne(mystery);
+            }
+        
+            function ent3rPl4r3r0ne(mystery) {
+                location.href=mystery;
             }
         }
-        function Obfusc4t10n() {
-            ent3rPl4y3r0ne();
-        }
-        function ent3rPl4r3r0ne() {
-            location.href='/gallery.html';
-        }
+
 
     </script>
 
